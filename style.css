@@ -12,12 +12,13 @@ body {
 .newslide {
       margin: auto;
       height: 100vh;
-      width: 100vw;
+      width:100vw;
       position: fixed;
       top: 0px;
       left: 0px;
       border:2px solid white;
-      animation: slideanimation 2000ms linear;
+      animation: slideanimation 1000ms linear;
+
 }
 
 .newimage {
@@ -28,7 +29,7 @@ body {
 
 @keyframes slideanimation {
       from {
-            transform: translateY(100vh);
+            transform: translateX(-100vw);
       }
 
       to {

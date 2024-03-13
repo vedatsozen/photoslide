@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+<script>
+
+let indexNo = 0;
+
+let photos = ["resim1.jpg","resim2.jpg","resim3.jpg","resim4.jpg"];
+
+function slideDiv() {
+
+let newSlide = document.createElement("div");
+let newImage = document.createElement("img");
+newSlide.classList.add("newslide");
+newImage.classList.add("newimage");
+newImage.src = photos[indexNo];
+
+document.body.appendChild(newSlide);
+newSlide.appendChild(newImage);
+
+indexNo = indexNo + 1;
+
+if ( indexNo == 3) {
+      indexNo = 0;
+}
+
+}
+
+slideDiv();
+
+setInterval(slideDiv,2000);
+
+</script>
+
+</body>
+</html>
